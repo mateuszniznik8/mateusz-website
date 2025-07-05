@@ -3,12 +3,15 @@
     "",
     "\\components",
     "\\components\\About",
-    "\\components\\Hero",
+    "\\components\\Awards",
+    "\\components\\Blog",
+    "\\components\\Clients",
+    "\\components\\Portfolio",
+    "\\components\\Services",
+    "\\components\\Testimonial",
     "\\pages",
-    "\\public",
-    "\\styles",
-    "\\styles\\helpers"
+    "\\pages\\api"
   ],
-  "SelectedNode": "\\components\\About\\AboutData.jsx",
+  "SelectedNode": "\\components\\Clients\\ClientsData.jsx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,7 @@
 import PortfolioImg from '@/public/images/portfolio-img.jpg';
 import MainImage from '@/public/images/blog-img-wide.jpg';
-import cothink from '@/public/images/blog-img-wide.jpg';
+import cothink from '@/public/images/cothink.jpg';
+import cothink2 from '@/public/images/cothink2.jpg';
 
 export const portfolioData = {
     mainData: {
@@ -25,7 +26,7 @@ export const portfolioData = {
             },
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            mainImage: PortfolioImg,
+            mainImage: cothink,
             mainImageWide: MainImage,
             images: [
                 { image: PortfolioImg },
@@ -52,7 +53,7 @@ export const portfolioData = {
             },
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            mainImage: PortfolioImg,
+            mainImage: cothink2,
             mainImageWide: MainImage,
             images: [
                 { image: PortfolioImg },

@@ -19,6 +19,7 @@ export const testimonialData = {
             avatar: TestimonialAvatar,
             jobTitle: 'CTO - Company',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+            url: 'https://github.com/mateuszniznik8'
         },
     ]
 };
