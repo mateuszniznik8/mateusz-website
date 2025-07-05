@@ -23,11 +23,11 @@ export const servicesData = {
             title: 'Marketing',
             description: 'I develop go-to-market strategies that balance commercial success with social value, scaling products that inform and inspire.',
         },
-          {
-            number: '03',
-            bootstrapIcon: 'bi bi-phone',
-            title: 'Marketing',
-            description: 'I develop go-to-market strategies that balance commercial success with social value, scaling products that inform and inspire.',
-        },
+        //  {
+        //    number: '03',
+        //    bootstrapIcon: 'bi bi-phone',
+        //    title: 'Marketing',
+        //    description: 'I develop go-to-market strategies that balance commercial success with social value, scaling products that inform and inspire.',
+       // },
     ]
 };
