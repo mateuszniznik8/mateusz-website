@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { headerData } from './HeaderData';
 
 const Header = () => {
@@ -34,11 +35,13 @@ const Header = () => {
 			<div className="container-fluid">
 				<div className="header-wrapper">
 					{/* Header Logo */}
-					<div className="header-logo">
-						<h2>
-							<Link href="/">{headerData.logo}</Link>
-						</h2>
-					</div>
+                                        <div className="header-logo">
+                                                <h2>
+                                                        <Link href="/">
+                                                                <Image src={headerData.logo} alt="logo" placeholder="blur" />
+                                                        </Link>
+                                                </h2>
+                                        </div>
 					{/* Header Nav */}
 					<div className="header-nav">
 						<Link className="button button-sm button-dot me-2 me-lg-3" href="/#contact">
