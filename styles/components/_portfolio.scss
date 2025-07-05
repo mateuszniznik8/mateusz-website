@@ -17,8 +17,8 @@
 				top: 0;
 				left: 0;
 				opacity: 0;
-				background-color: #ff82f3;
-				background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+                                background-color: #ffb347;
+                                background-image: linear-gradient(to right, #ffb347 0%, #f2935c 25%, #a37b73 50%, #6d7a8b 75%, #4e6a7b 100%);
 				width: 100%;
 				height: 100%;
 				@include transition(linear 0.1s);
