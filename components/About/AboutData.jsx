@@ -3,40 +3,38 @@ import HeroAvatar from '@/public/images/mn1.jpeg';
 export const aboutData = {
     mainData: {
         heroAvatar: HeroAvatar,
-        biography: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        biography: "Entrepreneurial leader with global experience in building impactful tech ventures. I maximize value through scalable platforms, engaging products, and tools that empower. Combining business insight with mission-driven innovation, I create solutions that are both profitable and purposeful.",
         projectsDone: "32",
         yearsOfExperience: "8",
         worldwideClients: "12",
     },
     skills: [
         {
-            name: 'Web Development',
+            name: 'Entrepreneurship',
         },
         {
-            name: 'UI & UX Design',
+            name: 'AI in Education',
         },
         {
-            name: 'Marketing',
-        },
+            name: 'Software Development',
+        },        
         {
-            name: 'SEO',
+            name: 'Game Production',
         },
-        {
-            name: 'Management',
-        },
+  
     ],
     connect: [
         {
-            url: '#',
-            bootstrapIcon: 'bi bi-facebook',
+            url: 'https://www.linkedin.com/in/mateusz-niznik/',
+            bootstrapIcon: 'bi bi-linkedin',
         },
         {
-            url: '#',
-            bootstrapIcon: 'bi bi-twitter',
+            url: 'https://github.com/mateuszniznik8',
+            bootstrapIcon: 'bi bi-github',
         },
         {
-            url: '#',
-            bootstrapIcon: 'bi bi-instagram',
+            url: 'https://medium.com/@mateusz.niznik',
+            bootstrapIcon: 'bi bi-medium',
         },
     ]
 };
