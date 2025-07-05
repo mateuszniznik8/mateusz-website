@@ -1,12 +1,12 @@
-import HeroAvatar from '@/public/images/hero-avatar.jpg';
+import HeroAvatar from '@/public/images/mn1.jpeg';
 
 export const aboutData = {
     mainData: {
         heroAvatar: HeroAvatar,
         biography: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        projectsDone: "432",
-        yearsOfExperience: "13",
-        worldwideClients: "900",
+        projectsDone: "32",
+        yearsOfExperience: "8",
+        worldwideClients: "12",
     },
     skills: [
         {
