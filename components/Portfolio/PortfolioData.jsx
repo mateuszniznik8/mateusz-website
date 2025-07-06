@@ -13,20 +13,21 @@ export const portfolioData = {
     },
     projects: [
         {
-            title: 'CoThink',
+            title: 'CoThink.AI - my startup',
             slug: 'first',
-            description: 'An AI-driven platform designed to support researchers, educators, and students in co-developing academic content and collaborative projects. CoThink leverages GPT-based tools to accelerate ideation, research structuring, and writing-bridging gaps in access to high-quality academic support. Built to democratize knowledge creation and enhance productivity in educational environments worldwide.',
+            description: 'To equip educators with strategies to teach in an AI-driven world and to guide students in using AI tools like ChatGPT as learning companions - not crutches - so they can solve complex problems with deep understanding, not just surface-level answers.',
             services: [
-                { name: 'List item' },
-                { name: 'List item' },
+                { name: 'Research' },
+                { name: 'Education' },
+                { name: 'AI' },
             ],
-            client: 'FlaTheme',
+            client: 'Myself',
             projectLink: {
-                title: 'www.flatheme.net',
-                url: 'https://www.flatheme.net'
+                title: 'cothinkai.com',
+                url: 'cothinkai.com'
             },
-            duration: '121 hours',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            duration: '12 months',
+            content: 'CoThink is an AI-powered education platform helping both professors and students adapt to the new era of AI-integrated learning. It combines AI tools with pedagogical guidance to foster critical thinking and transparent AI usage in academic work. The MVP supports assignment creation, guided study, AI misuse detection, and professor-student feedback loops.',
             mainImage: cothink,
             mainImageWide: MainImage,
             images: [
