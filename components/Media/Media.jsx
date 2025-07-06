@@ -36,8 +36,9 @@ const Media = () => {
                                             href={item.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="button button-dot button-sm"
+                                            className="button button-sm button-arrow"
                                         >
+                                            <i className="bi bi-arrow-right"></i>
                                             <span data-text="Read More">Read More</span>
                                         </a>
                                     </div>
