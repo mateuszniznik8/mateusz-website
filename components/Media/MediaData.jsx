@@ -5,6 +5,20 @@ export const mediaData = {
         title2Span: "Media",
         description: "A few places where my work has been mentioned",
     },
+    logos: [
+        {
+            alt: 'Tech News',
+            image: 'https://via.placeholder.com/120x60?text=Tech+News',
+        },
+        {
+            alt: 'Dev Weekly',
+            image: 'https://via.placeholder.com/120x60?text=Dev+Weekly',
+        },
+        {
+            alt: 'Podcast',
+            image: 'https://via.placeholder.com/120x60?text=Podcast',
+        },
+    ],
     articles: [
         {
             title: 'Interview on Tech News',

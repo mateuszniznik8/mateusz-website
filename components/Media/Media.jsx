@@ -10,7 +10,14 @@ const Media = () => {
                     <div className="col-12 col-xl-4">
                         <span className="title-heading text-white-04">{mediaData.mainData.title}</span>
                         <h1 className="display-3 fw-medium mb-0">{mediaData.mainData.title2} <span className="text-gradient">{mediaData.mainData.title2Span}</span></h1>
-                        {mediaData.mainData.description && <p>{mediaData.mainData.description}</p>}
+                        <div className="d-flex flex-wrap gap-3 mt-3 align-items-center press-logos">
+                            {mediaData.logos.map((logo, idx) => (
+                                <div key={idx} className="press-logo-box">
+                                    <Image src={logo.image} alt={logo.alt} width={120} height={60} />
+                                </div>
+                            ))}
+                        </div>
+                        {mediaData.mainData.description && <p className="mt-3">{mediaData.mainData.description}</p>}
                     </div>
                     <div className="col-12 col-xl-8">
                         <div className="row g-4">
