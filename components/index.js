@@ -8,7 +8,7 @@ export { default as About } from "./About/About";
 export { default as Services } from "./Services/Services";
 export { default as Clients } from "./Clients/Clients";
 export { default as Portfolio } from "./Portfolio/Portfolio";
-export { default as Awards } from "./Awards/Awards";
+export { default as Media } from "./Media/Media";
 export { default as Testimonial } from "./Testimonial/Testimonial";
 export { default as Blog } from "./Blog/Blog";
 export { default as Contact } from "./Contact/Contact";
