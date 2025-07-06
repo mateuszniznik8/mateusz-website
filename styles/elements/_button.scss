@@ -232,13 +232,35 @@ a, button {
 	line-height: 56px;
 }
 .button-circle-white {
-	background: white;
-	color: black;
-	&:before {
-		display: none;
-	}
-	&:hover {
-		background: white;
-		color: black;
-	}
+        background: white;
+        color: black;
+        &:before {
+                display: none;
+        }
+        &:hover {
+                background: white;
+                color: black;
+        }
+}
+
+// Button with arrow icon that slides in on hover
+.button-arrow {
+        position: relative;
+        padding-left: 30px;
+        i {
+                position: absolute;
+                top: 50%;
+                left: 16px;
+                @include transform(translateY(-50%));
+                visibility: hidden;
+                opacity: 0;
+                @include transition(linear 0.1s);
+        }
+        &:hover {
+                padding-left: 44px;
+                i {
+                        visibility: visible;
+                        opacity: 1;
+                }
+        }
 }

@@ -1,0 +1,17 @@
+//
+// Press logos strip
+//
+.press-logo-box {
+    img {
+        filter: grayscale(100%);
+        opacity: 0.6;
+        width: 100%;
+        height: auto;
+        @include transition(ease-out 0.12s);
+    }
+    &:hover {
+        img {
+            opacity: 1;
+        }
+    }
+}
