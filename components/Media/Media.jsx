@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { mediaData } from './MediaData'
 
 const Media = () => {
@@ -8,7 +9,7 @@ const Media = () => {
                 <div className="row g-4 g-xl-5">
                     <div className="col-12 col-xl-4">
                         <span className="title-heading text-white-04">{mediaData.mainData.title}</span>
-                        <h1 className="display-3 fw-medium mb-0">{mediaData.mainData.title2}<span className="text-gradient">{mediaData.mainData.title2Span}</span></h1>
+                        <h1 className="display-3 fw-medium mb-0">{mediaData.mainData.title2} <span className="text-gradient">{mediaData.mainData.title2Span}</span></h1>
                         {mediaData.mainData.description && <p>{mediaData.mainData.description}</p>}
                     </div>
                     <div className="col-12 col-xl-8">
@@ -16,12 +17,29 @@ const Media = () => {
                             {mediaData.articles.map((item, index) => (
                                 <div key={index} className="col-12 col-md-6">
                                     <div className="fancy-box">
-                                        <h4>
+                                        {item.image && (
+                                            <Image
+                                                className="mb-2 border-radius"
+                                                src={item.image}
+                                                alt={item.title}
+                                                width={300}
+                                                height={200}
+                                            />
+                                        )}
+                                        <h4 className="mb-1">
                                             <a href={item.url} target="_blank" rel="noopener noreferrer">
                                                 {item.title}
                                             </a>
                                         </h4>
-                                        <p>{item.description}</p>
+                                        <p className="mb-2">{item.description}</p>
+                                        <a
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="button button-dot button-sm"
+                                        >
+                                            <span data-text="Read More">Read More</span>
+                                        </a>
                                     </div>
                                 </div>
                             ))}
