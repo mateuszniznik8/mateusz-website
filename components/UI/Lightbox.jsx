@@ -10,7 +10,14 @@ const Lightbox = ({ image, closeLightbox }) => {
                         <div className="mfp-content">
                             <div className="mfp-figure">
                                 <button className="mfp-close">×</button>
-                                <Image src={image} alt="image" placeholder="blur" style={{ opacity: 1 }} />
+                                <Image
+                                    src={image}
+                                    alt="image"
+                                    placeholder="blur"
+                                    width={1440}
+                                    height={1024}
+                                    style={{ opacity: 1 }}
+                                />
                             </div>
                         </div>
                     </div>

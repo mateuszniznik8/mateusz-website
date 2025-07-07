@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Lightbox } from '@/components'
 import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
     const [lightboxImage, setLightboxImage] = useState(null);
+    const sliderRef = useRef(null);
+
 
     const openLightbox = (image) => {
         setLightboxImage(image);
@@ -23,6 +27,7 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
 
     // Get the last word from project.title
     const lastWord = getLastWord(project.title);
+
 
     return (
         <>
@@ -87,24 +92,69 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     <div dangerouslySetInnerHTML={{ __html: project.content }} />
                                 </div>
                             </div> {/* end row */}
-                            {/* Project Media */}
+                            {/* Project Media Slider */}
                             <div className="row g-4 g-lg-5 mt-1">
                                 <div className="col-12">
-                                    <Image className="border-radius" src={project.mainImageWide} alt={project.title} placeholder="blur" />
-                                </div>
-                                {/* Images Lightbox */}
-                                {project.images.map((item, index) => (
-                                    <div key={index} className="col-12 col-md-6">
-                                        <div onClick={() => openLightbox(item.image)}>
-                                            <div className="lightbox-image-box border-radius">
-                                                <Image src={item.image} alt={project.title} placeholder="blur" />
-                                                <div className="lightbox-icon">
-                                                    <i className="bi bi-arrows-fullscreen"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div className="mt-4">
+                                        <button
+                                            className="swiper-project-prev button-circle cursor-link"
+                                            onClick={() => sliderRef.current?.slidePrev()}
+                                            aria-label="Prev Slide"
+                                        >
+                                            <i className="bi bi-arrow-left"></i>
+                                            <i className="bi bi-arrow-left"></i>
+                                        </button>
+                                        <button
+                                            className="swiper-project-next button-circle cursor-link"
+                                            onClick={() => sliderRef.current?.slideNext()}
+                                            aria-label="Next Slide"
+                                        >
+                                            <i className="bi bi-arrow-right"></i>
+                                            <i className="bi bi-arrow-right"></i>
+                                        </button>
                                     </div>
-                                ))}
+                                    <Swiper
+                                        onSwiper={(swiper) => {
+                                            sliderRef.current = swiper;
+                                        }}
+                                        slidesPerView={1}
+                                        spaceBetween={30}
+                                        className="project-slider mt-4"
+                                    >
+                                        <SwiperSlide>
+                                            <div onClick={() => openLightbox(project.mainImageWide)}>
+                                                <Image
+                                                    className="border-radius"
+                                                    src={project.mainImageWide}
+                                                    alt={project.title}
+                                                    placeholder="blur"
+                                                    width={1440}
+                                                    height={1024}
+                                                />
+                                            </div>
+                                        </SwiperSlide>
+                                        {project.images.map((item, index) => (
+                                            <SwiperSlide key={index}>
+                                                <div onClick={() => openLightbox(item.image)}>
+                                                    <div className="lightbox-image-box border-radius">
+                                                        <Image
+                                                            src={item.image}
+                                                            alt={project.title}
+                                                            placeholder="blur"
+                                                            width={1440}
+                                                            height={1024}
+                                                        />
+                                                        {index !== 1 && index !== 2 && (
+                                                            <div className="lightbox-icon">
+                                                                <i className="bi bi-arrows-fullscreen"></i>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
                                 <div className="row mt-5">
                                     {prevProject ? (
                                         <div className="col-6">
