@@ -144,7 +144,7 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                                             width={1440}
                                                             height={1024}
                                                         />
-                                                        {index !== 1 && index !== 2 && (
+                                                        {index !== 0 && index !== 1 && (
                                                             <div className="lightbox-icon">
                                                                 <i className="bi bi-arrows-fullscreen"></i>
                                                             </div>
