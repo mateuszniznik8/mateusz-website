@@ -144,9 +144,11 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                                             width={1440}
                                                             height={1024}
                                                         />
-                                                        <div className="lightbox-icon">
-                                                            <i className="bi bi-arrows-fullscreen"></i>
-                                                        </div>
+                                                        {index !== 1 && index !== 2 && (
+                                                            <div className="lightbox-icon">
+                                                                <i className="bi bi-arrows-fullscreen"></i>
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 </div>
                                             </SwiperSlide>
