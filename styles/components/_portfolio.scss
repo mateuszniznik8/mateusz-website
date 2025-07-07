@@ -76,8 +76,16 @@
 
 .project-slider {
         width: 100%;
+        &.swiper,
+        &.swiper-container {
+                overflow: visible;
+        }
         .swiper-slide img {
                 width: 100%;
                 height: auto;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+                color: #fff;
         }
 }

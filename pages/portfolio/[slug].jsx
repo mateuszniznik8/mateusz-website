@@ -5,7 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -92,7 +96,14 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                             {/* Project Media */}
                             <div className="row g-4 g-lg-5 mt-1">
                                 <div className="col-12">
-                                    <Swiper slidesPerView={1} className="project-slider">
+                                    <Swiper
+                                        slidesPerView={1}
+                                        className="project-slider"
+                                        navigation
+                                        pagination={{ clickable: true }}
+                                        effect="fade"
+                                        modules={[Navigation, Pagination, EffectFade]}
+                                    >
                                         {[project.mainImageWide, ...project.images.map((item) => item.image)].map((img, index) => (
                                             <SwiperSlide key={index}>
                                                 <div onClick={() => openLightbox(img)}>
@@ -100,7 +111,6 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                                         className="border-radius"
                                                         src={img}
                                                         alt={project.title}
-                                                        placeholder="blur"
                                                         width={1440}
                                                         height={1024}
                                                     />
