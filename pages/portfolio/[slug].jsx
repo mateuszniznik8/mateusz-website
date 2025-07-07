@@ -4,6 +4,12 @@ import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
     const [lightboxImage, setLightboxImage] = useState(null);
@@ -90,21 +96,29 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                             {/* Project Media */}
                             <div className="row g-4 g-lg-5 mt-1">
                                 <div className="col-12">
-                                    <Image className="border-radius" src={project.mainImageWide} alt={project.title} placeholder="blur" />
-                                </div>
-                                {/* Images Lightbox */}
-                                {project.images.map((item, index) => (
-                                    <div key={index} className="col-12 col-md-6">
-                                        <div onClick={() => openLightbox(item.image)}>
-                                            <div className="lightbox-image-box border-radius">
-                                                <Image src={item.image} alt={project.title} placeholder="blur" />
-                                                <div className="lightbox-icon">
-                                                    <i className="bi bi-arrows-fullscreen"></i>
+                                    <Swiper
+                                        slidesPerView={1}
+                                        className="project-slider"
+                                        navigation
+                                        pagination={{ clickable: true }}
+                                        effect="fade"
+                                        modules={[Navigation, Pagination, EffectFade]}
+                                    >
+                                        {[project.mainImageWide, ...project.images.map((item) => item.image)].map((img, index) => (
+                                            <SwiperSlide key={index}>
+                                                <div onClick={() => openLightbox(img)}>
+                                                    <Image
+                                                        className="border-radius"
+                                                        src={img}
+                                                        alt={project.title}
+                                                        width={1440}
+                                                        height={1024}
+                                                    />
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
                                 <div className="row mt-5">
                                     {prevProject ? (
                                         <div className="col-6">

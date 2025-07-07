@@ -30,10 +30,10 @@ export const portfolioData = {
             duration: '12 months',
             content: 'CoThink is an AI-powered education platform helping both professors and students adapt to the new era of AI-integrated learning. It combines AI tools with pedagogical guidance to foster critical thinking and transparent AI usage in academic work. The MVP supports assignment creation, guided study, AI misuse detection, and professor-student feedback loops.',
             mainImage: cothink,
-            mainImageWide: MainImage,
+            mainImageWide: 'https://placehold.co/1440x1024?text=Slide+1',
             images: [
-                { image: PortfolioImg },
-                { image: PortfolioImg },
+                { image: 'https://placehold.co/1440x1024?text=Slide+2' },
+                { image: 'https://placehold.co/1440x1024?text=Slide+3' },
             ],
             categories: [
                 { name: 'AI' },
