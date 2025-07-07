@@ -71,5 +71,13 @@
 	}
 }
 .swiper-portfolio-prev {
-	margin-right: 6px;
+        margin-right: 6px;
+}
+
+.project-slider {
+        width: 100%;
+        .swiper-slide img {
+                width: 100%;
+                height: auto;
+        }
 }
