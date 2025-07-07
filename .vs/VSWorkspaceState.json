@@ -2,16 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\components",
-    "\\components\\About",
-    "\\components\\Awards",
-    "\\components\\Blog",
-    "\\components\\Clients",
     "\\components\\Portfolio",
     "\\components\\Services",
     "\\components\\Testimonial",
     "\\pages",
-    "\\pages\\api"
+    "\\public",
+    "\\styles",
+    "\\styles\\basic",
+    "\\styles\\components"
   ],
-  "SelectedNode": "\\components\\Clients\\ClientsData.jsx",
+  "SelectedNode": "\\components\\Portfolio\\PortfolioData.jsx",
   "PreviewInSolutionExplorer": false
 }

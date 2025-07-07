@@ -20,6 +20,7 @@ export const portfolioData = {
                 { name: 'Research' },
                 { name: 'Education' },
                 { name: 'AI' },
+                { name: 'AI' },
             ],
             client: 'Myself',
             projectLink: {
@@ -41,20 +42,20 @@ export const portfolioData = {
             ],
         },
         {
-            title: 'Project Title Here',
+            title: 'STREETVERS - Roguelike',
             slug: 'second',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+            description: 'STREETVERS is a gritty, fast-paced roguelike shooter set in the streets of Los Angeles. The game blends wave-based combat, strategic territory control, and a deep meta-progression system. Players fight to dominate districts, deliver premium weed, and upgrade weapons and character stats through a satisfying death-and-retry loop.',
             services: [
-                { name: 'List item' },
-                { name: 'List item' },
+                { name: 'Unity' },
+                { name: 'Game Development' },
             ],
-            client: 'FlaTheme',
+            client: 'Myself',
             projectLink: {
-                title: 'www.flatheme.net',
-                url: 'https://www.flatheme.net'
+                title: 'streetvers.com',
+                url: 'streetvers.com'
             },
-            duration: '121 hours',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            duration: '24 months',
+            content: 'Start from Long Beach and clear turf district by district: Torrance, Compton, Santa Monica, Downtown LA, and Hollywood. Each area throws increasingly difficult enemy waves at the player, culminating in intense police raids. Capturing turf unlocks passive income, while premium deliveries offer big payouts. Players unlock and upgrade a variety of weapons-handgun, shotgun, assault rifle, sniper rifle - and invest in permanent stat boosts like reload speed, damage, and cash gain. With each run, players get stronger, unlocking new characters, perks, and paths to domination.',
             mainImage: cothink2,
             mainImageWide: MainImage,
             images: [
@@ -62,9 +63,9 @@ export const portfolioData = {
                 { image: PortfolioImg },
             ],
             categories: [
-                { name: 'Category' },
-                { name: 'Category' },
-                { name: 'Category' }
+                { name: 'Unity Game' },
+                { name: 'Roguelike Shooter' },
+                { name: 'Urban Combat' }
             ],
         },
         {
@@ -177,3 +178,4 @@ export const portfolioData = {
         },
     ]
 };
+
