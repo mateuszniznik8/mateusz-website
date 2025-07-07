@@ -85,7 +85,13 @@ const Portfolio = () => {
                                     {/* Image */}
                                     <div className="portfolio-img">
                                         <Link href={`portfolio/${item.slug}`}>
-                                            <Image src={item.mainImage} alt={item.title} placeholder="blur" />
+                                            <Image
+                                                src={item.mainImage}
+                                                alt={item.title}
+                                                placeholder="blur"
+                                                width={1440}
+                                                height={1024}
+                                            />
                                         </Link>
                                     </div>
                                     <div className="pt-4">

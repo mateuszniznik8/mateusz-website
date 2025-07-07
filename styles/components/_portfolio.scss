@@ -71,5 +71,14 @@
 	}
 }
 .swiper-portfolio-prev {
-	margin-right: 6px;
+        margin-right: 6px;
+}
+
+.project-slider {
+        &.swiper, &.swiper-container {
+                overflow: visible;
+        }
+}
+.swiper-project-prev {
+        margin-right: 6px;
 }
