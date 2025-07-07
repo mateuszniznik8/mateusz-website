@@ -1,27 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { Lightbox } from '@/components'
 import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
     const [lightboxImage, setLightboxImage] = useState(null);
     const sliderRef = useRef(null);
 
-    const updateNavigation = (swiper) => {
-        const prevEl = document.querySelector('.swiper-project-prev');
-        const nextEl = document.querySelector('.swiper-project-next');
-        if (prevEl && nextEl) {
-            swiper.params.navigation.prevEl = prevEl;
-            swiper.params.navigation.nextEl = nextEl;
-            swiper.navigation.update();
-        }
-    };
 
     const openLightbox = (image) => {
         setLightboxImage(image);
@@ -39,11 +28,6 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
     // Get the last word from project.title
     const lastWord = getLastWord(project.title);
 
-    useEffect(() => {
-        if (sliderRef.current) {
-            updateNavigation(sliderRef.current);
-        }
-    }, []);
 
     return (
         <>
@@ -114,6 +98,7 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     <div className="mt-4">
                                         <button
                                             className="swiper-project-prev button-circle cursor-link"
+                                            onClick={() => sliderRef.current?.slidePrev()}
                                             aria-label="Prev Slide"
                                         >
                                             <i className="bi bi-arrow-left"></i>
@@ -121,6 +106,7 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                         </button>
                                         <button
                                             className="swiper-project-next button-circle cursor-link"
+                                            onClick={() => sliderRef.current?.slideNext()}
                                             aria-label="Next Slide"
                                         >
                                             <i className="bi bi-arrow-right"></i>
@@ -129,12 +115,8 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     </div>
                                     <Swiper
                                         onSwiper={(swiper) => {
-                                            swiper.params.navigation.prevEl = document.querySelector('.swiper-project-prev');
-                                            swiper.params.navigation.nextEl = document.querySelector('.swiper-project-next');
-                                            swiper.navigation.update();
+                                            sliderRef.current = swiper;
                                         }}
-                                        modules={[Navigation]}
-                                        navigation
                                         slidesPerView={1}
                                         spaceBetween={30}
                                         className="project-slider mt-4"
