@@ -31,7 +31,32 @@ export const portfolioData = {
                 url: 'cothinkai.com'
             },
             duration: '12 months',
-            content: 'CoThink is an AI-powered education platform helping both professors and students adapt to the new era of AI-integrated learning. It combines AI tools with pedagogical guidance to foster critical thinking and transparent AI usage in academic work. The MVP supports assignment creation, guided study, AI misuse detection, and professor-student feedback loops.',
+            content: `
+  <div class="formatted-project-content">
+    <h2><strong>I help professors transform old materials into AI-friendly assignments.</strong></h2>
+
+    <h3><strong>Problem</strong></h3>
+    <p>
+      Most universities struggle to integrate AI into teaching. Only top-tier institutions have access to custom AI tools. Meanwhile, professors at regular schools face outdated systems and lack the resources to turn their materials into AI-friendly formats.
+    </p>
+
+    <h3><strong>Solution</strong></h3>
+    <p>
+      CoThink helps educators to easily redesign assignments for the AI era – teaching students how to think with AI, not just use it. Every professor becomes AI-enabled, and every student learns like they’re at a top school.
+    </p>
+
+    <h3><strong>Product</strong></h3>
+    <ul>
+      <li><strong>AI Assignment Creator</strong> – helps professors design assignments that connect AI with critical thinking</li>
+      <li><strong>AI Study Companion</strong> – guides students step-by-step to think with AI, not rely on it</li>
+      <li><strong>Personal Projects</strong> – students develop what they care about – learning by doing</li>
+      <li><strong>Learn & Explain</strong> – students don’t just use AI, they explain results and build deep understanding</li>
+      <li><strong>LMS-Ready</strong> – easily connects with Canvas, Moodle, Populi, and more</li>
+    </ul>
+
+    <p><strong>CoThink brings elite AI learning to every classroom.</strong></p>
+  </div>
+`,
             mainImage: cothink,
             mainImageWide: screen1,
             images: [
