@@ -9,13 +9,13 @@
 .bg-yellow { background: $color-yellow; }
 
 .bg-light-content {
-	color: $color-primary;
-	h1,h2,h3,h4,h5,h6 { color: $color-dark; }
-	a {
-		&:not([class*='button']) {
-			color: black;
-			&:hover, &:focus { color: $color-dark; }
-		}
+        color: $color-primary;
+        h1,h2,h3,h4,h5,h6 { color: $color-white; }
+        a {
+                &:not([class*='button']) {
+                        color: black;
+                        &:hover, &:focus { color: $color-dark; }
+                }
 	}
 }
 .bg-dark-content {
