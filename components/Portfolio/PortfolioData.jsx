@@ -3,6 +3,9 @@ import MainImage from '@/public/images/blog-img-wide.jpg';
 import cothink from '@/public/images/cothink.png';
 import cothink2 from '@/public/images/cothink2.png';
 import cothink3 from '@/public/images/Proffesor-view.png';
+import screen1 from '@/public/images/screen1.png';
+import screen2 from '@/public/images/screen2.png';
+import screen3 from '@/public/images/screen3.png';
 
 export const portfolioData = {
     mainData: {
@@ -30,10 +33,10 @@ export const portfolioData = {
             duration: '12 months',
             content: 'CoThink is an AI-powered education platform helping both professors and students adapt to the new era of AI-integrated learning. It combines AI tools with pedagogical guidance to foster critical thinking and transparent AI usage in academic work. The MVP supports assignment creation, guided study, AI misuse detection, and professor-student feedback loops.',
             mainImage: cothink,
-            mainImageWide: cothink3,
+            mainImageWide: screen1,
             images: [
-                { image: cothink3 },
-                { image: cothink3 },
+                { image: screen2 },
+                { image: screen3 },
             ],
             categories: [
                 { name: 'AI' },
