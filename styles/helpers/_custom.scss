@@ -1,3 +1,19 @@
 //
 // Your Custom styles //
 //
+
+.formatted-project-content {
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: .5rem;
+  }
+}
